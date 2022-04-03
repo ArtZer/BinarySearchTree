@@ -2,9 +2,8 @@
 
 namespace BinarySearchTree
 {
-    internal class Node<T> : IComparable<T>
+    internal class Node<T>
         where T : IComparable
-        //этот интерфейс позволяет проводить сравнения <>=
     {
         public T Data { get; set; }
         public Node<T> Left { get; set; }
@@ -59,11 +58,6 @@ namespace BinarySearchTree
             {
                 throw new ArgumentException("Не совпадение типов");
             }
-        }
-
-        public int CompareTo(T? other)
-        {
-            return Data.CompareTo(other);
         }
 
         public override string ToString()
